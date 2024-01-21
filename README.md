@@ -32,7 +32,7 @@ if you are using powershall use:
 
 $base64EncodedString = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("your-password"))
 
-# Print the encoded string
+### Print the encoded string
 Write-Host $base64EncodedString
 
 put the generated password in your  mysql-secret.yaml file, MYSQL_ROOT_PASSWORD:<generated password>
