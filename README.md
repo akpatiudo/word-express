@@ -65,7 +65,7 @@ Step 5: Access WordPress
 Retrieve the WordPress service NodePort: kubectl get svc wordpress-service
 
 Access WordPress in a web browser using the NodePort and external IP: http://<external-ip>:<node-port> 
-the external-ip is your local ip address, if your mechain did not allocate to you you can use configip to access it, however, from the monitoring snippet, External-IP is pending, this often happen when using dockerhub, it takes time to allocate an Ip adress or might not allocate it
+the external-ip is your local ip address, if your mechain did not allocate to you you can use ipconfig or docker inspect wordpress:5.8.3-php7.4-apache to access it, however, from the monitoring snippet, External-IP is pending, this often happen when using dockerhub, it takes time to allocate an Ip adress or might not allocate it
 thus, you can use docker command to do this: <docker run -d -p 8080:80 --name my-wordpress wordpress:5.8.3-php7.4-apache > make sure is is the name of your image. 
 
 ### Conclusion
